@@ -70,7 +70,7 @@
 {
     if (data == nil) return nil;
     
-    TBXML *tbxml = [TBXML tbxmlWithXMLData:data error:err];
+    TBXML *tbxml = [[TBXML alloc] initWithXMLData:data error:err];
     if (tbxml == nil || !tbxml.rootXMLElement) {
         return nil;
     }
